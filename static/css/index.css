@@ -1,0 +1,284 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.title.is-1 {
+  font-size: 2.5rem;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ddiffusionccsp {
+  font-variant: small-caps;
+  color: hsl(121, 100%, 36%) !important;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.teaser video {
+  object-fit: fill;
+}
+#glass{
+  margin-left: -10px;
+}
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(121, 100%, 36%) !important;
+}
+
+.conference-authors a {
+   color: hsl(0, 0%, 16%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+.full-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  border-radius: 5px;
+  margin-top: 10px
+}
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100vh;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
+
+#interpolation-image img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+ .dropdown-item{
+    white-space: pre-wrap;
+}
+
+
+.justify {
+  text-align: justify;
+}
+
+/* table holding plans */
+
+.search-table-outter {
+  overflow-x: scroll;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-table {
+  table-layout: fixed;
+  margin: 10px auto 0px auto;
+  border-radius: 6px 6px 6px 6px;
+	border: 1px solid #000;
+	border-spacing: 0;
+}
+
+.search-table tr:first-child th:first-child {
+	border-top-left-radius: 5px !important ;
+}
+
+.search-table tr:first-child th:last-child {
+	border-top-right-radius: 5px !important ;
+}
+
+.search-table tr:last-child td:first-child {
+	border-bottom-left-radius: 5px !important ;
+}
+
+.search-table tr:last-child td:last-child {
+	border-bottom-right-radius: 5px !important ;
+}
+
+.search-table, td, th {
+  border-collapse:collapse;
+  border:1px solid #fff;
+  width: auto !important ;
+  color: #444;
+}
+
+th {
+  text-align: center !important ;
+  padding:10px 4px;
+  font-size:0.8em;
+  background:#ccc;
+}
+
+td {
+  text-align: left !important ;
+  padding:5px 6px;
+  font-size:0.7em;
+  height:30px;
+  white-space: nowrap;
+  background:#eee;
+}
+
+.hiddentxt {
+  font-weight: bold;
+  z-index:99;
+}
+
+.hiddenimg {
+  display: none;
+}
+
+.hiddentxt:hover ~ .hiddenimg {
+  display: block;
+  /* position: absolute; */
+  position: fixed;
+  left: 50%;
+  bottom: 25%;
+  z-index: 299
+}
+
+#table-note {
+  text-align: left !important ;
+  width: 70% !important ;
+  margin-left: auto !important ;
+  margin-right: auto !important ;
+  font-size: 0.8em !important ;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 2em;
+}
