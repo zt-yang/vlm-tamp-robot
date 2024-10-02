@@ -31,6 +31,16 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
+.video-teaser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #6e706e;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+}
+
 .teaser video {
   object-fit: fill;
 }
