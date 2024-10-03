@@ -34,21 +34,21 @@ $(document).ready(function() {
 
 })
 
-function updateResultVideo() {
-  var task = document.getElementById("single-menu-replay").value;
+// function updateResultVideo() {
+//   var task = document.getElementById("single-menu-replay").value;
 
-  console.log("qpred", "media/results/" + task + ".mp4");
+//   console.log("qpred", "media/results/" + task + ".mp4");
 
-  var video = document.getElementById("result-video");
-  video.src = "media/results/" + task + ".mp4";
-  video.playbackRate = 0.5;
-  video.play();
+//   var video = document.getElementById("result-video");
+//   video.src = "media/results/" + task + ".mp4";
+//   video.playbackRate = 0.5;
+//   video.play();
 
-  var table1 = document.getElementById("result-table");
-  table1.setAttribute("w3-include-html", "result-"+task+".html");
+//   var table1 = document.getElementById("result-table");
+//   table1.setAttribute("w3-include-html", "result-"+task+".html");
 
-  includeHTML()
-}
+//   includeHTML()
+// }
 
 function includeHTML() {
   var z, i, elmnt, file, xhttp;

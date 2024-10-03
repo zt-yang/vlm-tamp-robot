@@ -18,6 +18,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/chat.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -25,14 +26,49 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
-<body onload="updateResultVideo();">
+<!-- <body onload="updateResultVideo();"> -->
+
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://diffusion-ccsp.github.io">
+            DiffusionCCSP
+          </a>
+          <a class="navbar-item" href="https://piginet.github.io/">
+            PIGINet
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
 
 <section class="hero" style="background-color: #ffffff; z-index:-10">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Guiding Long-Horizon Task and Motion Planning with Vision Language Models</h1>
+          <h1 class="title is-1 publication-title">Guiding Long-Horizon Task and Motion Planning <br> with Vision Language Models</h1>
           <h3 class="title is-4 conference-authors">
             In Submission
             <!-- <a target="_blank" href="https://2025.ieee-icra.org/"></a> -->
@@ -58,16 +94,16 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link.
+              <!-- PDF Link. -->
               <span class="link-block">
-                <a target="_blank" href="https://arxiv.org/abs/2211.01576"
+                <a target="_blank" href="paper/ICRA25-VLM-TAMP.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>ArXiv</span>
                 </a>
-              </span> -->
+              </span>
 
             <span class="link-block">
               <a target="_blank" href="https://www.youtube.com/watch?v=VLikGooIdwg&ab_channel=ZhutianYang"
@@ -106,7 +142,7 @@
 
       <div class="video-teaser">
         <video poster="" autoplay muted width="70%" controls>
-          <source src="media/teaser.mp4" type="video/mp4">
+          <source src="media/videos/teaser.mp4" type="video/mp4">
         </video>
       </div>
 
@@ -116,7 +152,7 @@
          </h2>
        </div>
 
-      <img src="media/figures/overview.png" class="full-image" style="width:75%"
+      <img src="media/figures/overview.png" class="full-image" style="width:75%;"
          alt="VLM-TAMP" />
 
     </div>
@@ -124,49 +160,139 @@
 </section>
 
 
-<!-- <section class="hero" style="background-color: #ffffff; z-index:-10; margin-top: -5rem">
+<section class="hero is-light" style="z-index:-10">
+  <div class="container">
+    <div class="hero-body" style="padding-bottom: 0.5em;">
+
+       <div class="container">
+         <h2 class="subtitle has-text-centered">
+         Vision-Language Models (VLM) can generate plausible high-level plans. 
+         </h2>
+       </div>
+
+    </div>
+  </div>
+
+  <div class="chat-body">
+        <div class="chat-container">
+          <div class="sidebar">
+            <div class="menu">Problems</div>
+            <div class="problem-sections">
+              <div class="problem-section" data-content="problem1">
+                Make Chicken Soup <br><span class="sidenote">(with TAMP solutions and reprompting)</span>
+              </div>
+            </div>
+          </div>
+          <div class="chat-window">
+            <div class="chat-header">
+
+              <span>
+                VLM:
+                <select id="model-select">
+                  <option value="modelA">gpt-4o-mini</option>
+                </select>
+              </span>
+
+              <span>
+                Query Mode:
+                <select id="mode-select">
+                  <option value="modeA">Subgoals</option>
+                  <option value="modeB">Actions</option>
+                </select>
+              </span>
+
+              <span>
+                Robot:
+                <select id="robot-select">
+                  <option value="robotA">Dual-Arm PR2</option>
+                  <option value="robotB">Single-Arm PR2</option>
+                </select>
+              </span>
+              
+              <span>
+                Init:
+                <select id="env-select">
+                  <option value="envA">Open Spaces</option>
+                  <option value="envB">More Obstacles</option>
+                </select>
+              </span>
+              
+            </div>
+            <div class="chat-content" id="chat-content">
+              <!-- Chat content will be loaded dynamically here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+</section>
+
+
+<section class="hero" style="z-index:-10">
   <div class="container">
     <div class="hero-body">
 
-       <div class="container" style="padding-top:1.5rem; padding-bottom:0.5rem">
+       <div class="container" style="margin-bottom:-1rem">
          <h2 class="subtitle has-text-centered">
-         Vision-Language Models (VLM) can generate plausible high-level plans. However, there is no guarantee that the predicted actions are <b>geometrically & kinematically feasible</b> for a <b>particular robot embodiment</b>
+         However, there is no guarantee that the actions predicted and grounded by VLM/LLMs <br> are <b>geometrically and kinematically feasible</b> for a <b>particular robot embodiment.</b>
          </h2>
          <h2 class="subtitle has-text-centered">
          For example, when the VLM predicted step is "Place the cabbage in the pot," <br>the shortest plan for the following three robot embodiments are different:</b>
          </h2>
        </div>
 
-      <table class='video-table'>
-        <tr>
-          <th>Dual-Arm Rummy (Long Arms)</th>
-          <th>Dual-Arm PR2 (Shorter Arms)</th>
-          <th>Single-Arm PR2</th>
-        </tr>
-        <tr>
-          <td>
-            <video poster="" autoplay muted loop height="100%">
-              <source src="media/task-4-data_1.mp4" type="video/mp4">
-            </video>
-          </td>
-
-          <td>
-            <video id="diffusion" poster="" autoplay muted height="100%" controls>
-              <source src="media/task-4-diffusion_1.mp4" type="video/mp4">
-            </video>
-          </td>
-
-          <td>
-            <video poster="" autoplay muted loop height="100%" playbackRate=2>
-              <source src="media/task-4-execution_1.mp4" type="video/mp4">
-            </video>
-          </td>
-        </tr>
-      </table>
-
     </div>
   </div>
-</section> -->
+
+
+  <table class='video-table' style="margin-bottom:4rem">
+    <tr>
+      <th>Embodiment</th>
+      <th>Dual-Arm Rummy (Long Arms)</th>
+      <th>Dual-Arm PR2 (Shorter Arms)</th>
+      <th>Single-Arm PR2</th>
+    </tr>
+    <tr style="font-family: monospace;">
+      <td>Plans</td>
+      <td>
+        pick(left-arm, cabbage)<br>
+        place(left-arm, cabbage, pot)
+      </td>
+      <td>
+        pick(left-arm, cabbage)<br>
+        push-handle(right-arm, cabbage-drawer)<br>
+        place(left-arm, cabbage, pot)
+      </td>
+      <td>
+        pick(left-arm, cabbage)<br>
+        place(left-arm, cabbage, counter)<br>
+        pick(left-arm, cabbage)<br>
+        place(left-arm, cabbage, pot)
+      </td>
+    </tr>
+    <tr style="max-height: 300px;">
+      <td>Trajectories</td>
+      <td>
+        <video class="video-embodiment" poster="" autoplay muted height="100%" controls>
+          <source src="media/videos/embodiment_rummy_1.mp4" type="video/mp4">
+        </video>
+      </td>
+
+      <td>
+        <video class="video-embodiment" poster="" autoplay muted height="100%" controls>
+          <source src="media/videos/embodiment_pr2_dual_arm_1.mp4" type="video/mp4">
+        </video>
+      </td>
+
+      <td>
+        <video class="video-embodiment" poster="" autoplay muted height="100%" controls > <!-- playbackRate=2 -->
+          <source src="media/videos/embodiment_pr2_single_arm_1.mp4" type="video/mp4">
+        </video>
+      </td>
+    </tr>
+  </table>
+
+</section>
 
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -219,5 +345,6 @@
 includeHTML();
 </script> -->
 
+<script src="./static/js/chat.js"></script>
 </body>
 </html>

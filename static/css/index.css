@@ -17,11 +17,6 @@ body {
     margin-bottom: 5px;
 }
 
-.ddiffusionccsp {
-  font-variant: small-caps;
-  color: hsl(121, 100%, 36%) !important;
-}
-
 .teaser .hero-body {
   padding-top: 0;
   padding-bottom: 3rem;
@@ -41,9 +36,33 @@ body {
   border-radius: 10px;
 }
 
-.teaser video {
-  object-fit: fill;
+.video-embodiment {
+  max-height: 400px !important;
 }
+
+.video-table {
+/*  background-color: white;*/
+  width: 80%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.video-table td, .video-table th {
+  margin: 10px;
+  overflow: hidden;
+  padding: 10px;
+/*  font-size: 0;*/
+}
+
+.video-table video {
+  margin: 0;
+/*  border: 1px solid #bbb;*/
+  border-radius: 10px;
+}
+
 #glass{
   margin-left: -10px;
 }
@@ -219,7 +238,7 @@ body {
   table-layout: fixed;
   margin: 10px auto 0px auto;
   border-radius: 6px 6px 6px 6px;
-	border: 1px solid #000;
+/*	border: 1px solid #000;*/
 	border-spacing: 0;
 }
 
@@ -241,7 +260,7 @@ body {
 
 .search-table, td, th {
   border-collapse:collapse;
-  border:1px solid #fff;
+/*  border:1px solid #fff;*/
   width: auto !important ;
   color: #444;
 }

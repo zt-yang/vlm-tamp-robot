@@ -1,0 +1,64 @@
+<p>Translate the each of the listed actions in English into a formal language defined by the following primitive actions. <br>
+Each action in English may correspond to multiple primitive actions:<br>
+
+<p>
+<span class="expand-toggle-1">[expand]</span>
+<div class="hidden-text-1">
+actions = <br>
+[<br>
+'pick(&lt;obj&gt;)': it contains one argument. The robot must have an empty hand to pick up an object.<br>
+'place(&lt;obj&gt;, &lt;surface&gt;)': it contains two arguments.<br>
+'sprinkle(&lt;obj&gt;, &lt;container&gt;)': it contains two arguments. There must be no object placed on top of the container.<br>
+'stir(&lt;container&gt;, &lt;obj&gt;)': it contains two arguments. There must be no object placed on top of the container.<br>
+'chop(&lt;obj&gt;, &lt;utensil&gt;)': it contains two arguments.<br>
+'open(&lt;joint&gt;)': it contains one argument.<br>
+'close(&lt;joint&gt;)': it contains one argument.<br>
+'nudge(&lt;door&gt;)': it contains one argument. This action is applied to open a door even wider.<br>
+'turn-on(&lt;knob&gt;)': turning on a stove knob, it contains one argument.<br>
+'turn-off(&lt;knob&gt;)': turning off a stove knob, it contains one argument.<br>
+'turn-on(&lt;handle&gt;)': turning on a faucet handle, it contains one argument.<br>
+'turn-off(&lt;handle&gt;)': turning off a faucet handle, it contains one argument.<br>
+], <br>
+<br>
+<br>
+The above actions include argument types. Please use the objects in the respective types:<br>
+``<br>
+{  '&lt;appliance&gt;': [],<br>
+   '&lt;button&gt;': [],<br>
+   '&lt;condiment&gt;': ['salt shaker', 'pepper shaker'],<br>
+   '&lt;door&gt;': ['cabinet right door', 'cabinet left door', 'fridge door'],<br>
+   '&lt;drawer&gt;': [],<br>
+   '&lt;food&gt;': ['chicken leg'],<br>
+   '&lt;joint&gt;': [  'cabinet right door',<br>
+                 'cabinet left door',<br>
+                 'stove knob on the right',<br>
+                 'stove knob on the left',<br>
+                 'faucet handle',<br>
+                 'fridge door'],<br>
+   '&lt;knob&gt;': [  'stove knob on the right',<br>
+                'stove knob on the left',<br>
+                'faucet handle'],<br>
+   '&lt;movable&gt;': [  'chicken leg',<br>
+                   'pot lid',<br>
+                   'pot body',<br>
+                   'salt shaker',<br>
+                   'pepper shaker'],<br>
+   '&lt;region&gt;': ['pot body'],<br>
+   '&lt;space&gt;': ['cabinet', 'pot body'],<br>
+   '&lt;surface&gt;': [  'stove on the left',<br>
+                   'stove on the right',<br>
+                   'counter top on the left',<br>
+                   'counter top on the right',<br>
+                   'pot body',<br>
+                   'pot bottom',<br>
+                   'kitchen sink',<br>
+                   'fridge shelf'],<br>
+   '&lt;utensil&gt;': []}<br>
+''<br>
+<br>
+Return the actions in a list and give no explanation. <br>
+Note that:<br>
+1. The arguments shouldn't include robot parts, e.g., 'arm', 'gripper'.<br>
+2. If a new object not mentioned in the set of objects is used as arguments, please name it with the same as the object that constitutes it the most and exists in the given list of objects.<br>
+3. If one action cannot be translated into the above set, skip that action.<br>
+</div>
