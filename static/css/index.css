@@ -26,6 +26,26 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
+.text-vlm {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.text-tamp {  
+  color: #2980b9;
+  font-weight: bold;
+}
+
+.text-reprompt {
+  color: #d35400;
+  font-weight: bold;
+}
+
+.text-baselines {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
 .video-teaser {
   display: flex;
   align-items: center;

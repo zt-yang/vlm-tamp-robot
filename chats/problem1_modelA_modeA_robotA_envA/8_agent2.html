@@ -1,0 +1,62 @@
+<p>Translate the above intermediate goals into a formal language defined by the following subgoals.<br>
+</p>
+<span class="expand-toggle-1">[expand]</span>
+<div class="hidden-text-1">
+subgoals = <br>
+[<br>
+'picked(&lt;movable&gt;)': the result of picking up &lt;movable&gt;, it contains one argument.<br>
+'in(&lt;movable&gt;, &lt;space&gt;)': the result of picking up &lt;movable&gt; and placing it inside &lt;space&gt;, it contains two arguments.<br>
+'on(&lt;movable&gt;, &lt;surface&gt;)': the result of picking up &lt;movable&gt; and placing it on &lt;surface&gt;, it contains two arguments.<br>
+'sprinkled-to(&lt;movable&gt;, &lt;region&gt;)': the result of picking up &lt;movable&gt; and sprinkling it into &lt;region&gt;, it contains two arguments.<br>
+'stirred(&lt;region&gt;, &lt;movable&gt;)': the result of picking up &lt;movable&gt; to stir &lt;region&gt;, it contains two arguments.<br>
+'chopped(&lt;movable&gt;, &lt;utensil&gt;)': the result of picking up &lt;utensil&gt; to chop &lt;movable&gt;, it contains two arguments.<br>
+'opened-door(&lt;door&gt;)': the result of opening &lt;door&gt;, it contains one argument.<br>
+'closed-door(&lt;door&gt;)': the result of closing &lt;door&gt;, it contains one argument.<br>
+'opened-drawer(&lt;drawer&gt;)': the result of closing &lt;drawer&gt;, it contains one argument.<br>
+'closed-drawer(&lt;drawer&gt;)': the result of closing &lt;drawer&gt;, it contains one argument.<br>
+'pressed(&lt;button&gt;)': the result of pressing &lt;button&gt;, it contains one argument.<br>
+'turned-on(&lt;knob&gt;)': the result of turning &lt;handle&gt; or &lt;knob&gt; to start up the associated appliance, it contains one argument.<br>
+'turned-off(&lt;knob&gt;)': the result of turning &lt;handle&gt; or &lt;knob&gt; to shut down the associated appliance, it contains one argument.<br>
+], <br>
+<br>
+The above subgoals include argument types. Please use the objects in the respective types:<br>
+``<br>
+{  '&lt;appliance&gt;': [],<br>
+   '&lt;button&gt;': [],<br>
+   '&lt;condiment&gt;': ['salt shaker', 'pepper shaker'],<br>
+   '&lt;door&gt;': ['cabinet right door', 'cabinet left door', 'fridge door'],<br>
+   '&lt;drawer&gt;': [],<br>
+   '&lt;food&gt;': ['chicken leg'],<br>
+   '&lt;joint&gt;': [  'cabinet right door',<br>
+                 'cabinet left door',<br>
+                 'stove knob on the right',<br>
+                 'stove knob on the left',<br>
+                 'faucet handle',<br>
+                 'fridge door'],<br>
+   '&lt;knob&gt;': [  'stove knob on the right',<br>
+                'stove knob on the left',<br>
+                'faucet handle'],<br>
+   '&lt;movable&gt;': [  'chicken leg',<br>
+                   'pot lid',<br>
+                   'pot body',<br>
+                   'salt shaker',<br>
+                   'pepper shaker'],<br>
+   '&lt;region&gt;': ['pot body'],<br>
+   '&lt;space&gt;': ['cabinet', 'pot body'],<br>
+   '&lt;surface&gt;': [  'stove on the left',<br>
+                   'stove on the right',<br>
+                   'counter top on the left',<br>
+                   'counter top on the right',<br>
+                   'pot body',<br>
+                   'pot bottom',<br>
+                   'kitchen sink',<br>
+                   'fridge shelf'],<br>
+   '&lt;utensil&gt;': []}<br>
+''<br>
+<br>
+Return the subgoals in a list and give no explanation. <br>
+Make sure the sub-goals are in the same order as the steps in the intermediate goals. <br>
+Note that the arguments shouldn't include robot parts, e.g., 'arm', 'gripper'.<br>
+If a new object not mentioned in the set of objects is used as arguments, please name it with the same as the object that constitutes it the most and exists in the given list of objects.<br>
+If one intermediate goal cannot be translated into a sub-goal, skip that step.<br>
+</div>

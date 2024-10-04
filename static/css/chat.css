@@ -4,13 +4,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 800px;
 }
 
 .chat-body .chat-container {
   display: flex;
   width: 80%;
-  height: 90vh;
+  height: 750px;
   background-color: #212121;
   border-radius: 8px;
   overflow: hidden;
@@ -53,6 +53,19 @@
 
 .chat-body .sidenote {
   color: #b4b4b4; 
+}
+
+.chat-body .message .clickable-list {
+  color: #b4b4b4; 
+  padding: 4px;
+}
+
+.chat-body .message .clickable-list:hover {
+  color: white;
+  background-color: #212121; 
+  padding: 4px;
+  border-radius: 8px; 
+  cursor: pointer;
 }
 
 .chat-body .chat-window {

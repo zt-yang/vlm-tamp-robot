@@ -96,7 +96,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a target="_blank" href="paper/ICRA25-VLM-TAMP.pdf"
+                <a target="_blank" href="http://arxiv.org/abs/2410.02193"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -106,7 +106,7 @@
               </span>
 
             <span class="link-block">
-              <a target="_blank" href="https://www.youtube.com/watch?v=VLikGooIdwg&ab_channel=ZhutianYang"
+              <a target="_blank" href="https://youtu.be/1JDua3opFuM&ab_channel=ZhutianYang"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="fab fa-youtube"></i>
@@ -162,79 +162,11 @@
 
 <section class="hero is-light" style="z-index:-10">
   <div class="container">
-    <div class="hero-body" style="padding-bottom: 0.5em;">
-
-       <div class="container">
-         <h2 class="subtitle has-text-centered">
-         Vision-Language Models (VLM) can generate plausible high-level plans. 
-         </h2>
-       </div>
-
-    </div>
-  </div>
-
-  <div class="chat-body">
-        <div class="chat-container">
-          <div class="sidebar">
-            <div class="menu">Problems</div>
-            <div class="problem-sections">
-              <div class="problem-section" data-content="problem1">
-                Make Chicken Soup <br><span class="sidenote">(with TAMP solutions and reprompting)</span>
-              </div>
-            </div>
-          </div>
-          <div class="chat-window">
-            <div class="chat-header">
-
-              <span>
-                VLM:
-                <select id="model-select">
-                  <option value="modelA">gpt-4o-mini</option>
-                </select>
-              </span>
-
-              <span>
-                Query Mode:
-                <select id="mode-select">
-                  <option value="modeA">Subgoals</option>
-                  <option value="modeB">Actions</option>
-                </select>
-              </span>
-
-              <span>
-                Robot:
-                <select id="robot-select">
-                  <option value="robotA">Dual-Arm PR2</option>
-                  <option value="robotB">Single-Arm PR2</option>
-                </select>
-              </span>
-              
-              <span>
-                Init:
-                <select id="env-select">
-                  <option value="envA">Open Spaces</option>
-                  <option value="envB">More Obstacles</option>
-                </select>
-              </span>
-              
-            </div>
-            <div class="chat-content" id="chat-content">
-              <!-- Chat content will be loaded dynamically here -->
-            </div>
-          </div>
-        </div>
-      </div>
-
-</section>
-
-
-<section class="hero" style="z-index:-10">
-  <div class="container">
     <div class="hero-body">
 
        <div class="container" style="margin-bottom:-1rem">
          <h2 class="subtitle has-text-centered">
-         However, there is no guarantee that the actions predicted and grounded by VLM/LLMs <br> are <b>geometrically and kinematically feasible</b> for a <b>particular robot embodiment.</b>
+         Vision-Language Models (VLM) can generate plausible high-level plans. <br>However, there is no guarantee that the actions predicted and grounded by VLM/LLMs <br> are <b>geometrically and kinematically feasible</b> for a <b>particular robot embodiment.</b>
          </h2>
          <h2 class="subtitle has-text-centered">
          For example, when the VLM predicted step is "Place the cabbage in the pot," <br>the shortest plan for the following three robot embodiments are different:</b>
@@ -291,8 +223,119 @@
       </td>
     </tr>
   </table>
-
 </section>
+
+
+<section class="hero" style="z-index:-10">
+  <div class="container">
+    <div class="hero-body" style="padding-bottom: 0em;">
+
+       <div class="container">
+         <h2 class="subtitle has-text-centered">
+        We propose <b>VLM-TAMP</b>, a hierarchical planning algorithm that leverages a <span class="text-vlm">VLM</span> to generate <br>both semantically-meaningful and horizon-reducing subgoals that guide a <span class="text-tamp">task and motion planner</span>. <br>When a subgoal cannot be refined, the VLM is <span class="text-reprompt">queried again for replanning</span>.  
+         </h2>
+       </div>
+
+      <img src="media/figures/approach.png" class="full-image" style="width:75%; padding-top: 0.5em;"
+         alt="VLM-TAMP" />
+
+    </div>
+  </div>
+
+
+  <div class="chat-body">
+        <div class="chat-container">
+          <div class="sidebar">
+            <div class="menu">Examples</div>
+            <div class="problem-sections">
+              <div class="problem-section" data-content="problem1">
+                Make Chicken Soup <br><span class="sidenote">(with TAMP solutions and reprompting)</span>
+              </div>
+            </div>
+          </div>
+          <div class="chat-window">
+            <div class="chat-header">
+
+              <span>
+                VLM:
+                <select id="model-select">
+                  <option value="modelA">gpt-4o-mini</option>
+                </select>
+              </span>
+
+              <span>
+                Query Mode:
+                <select id="mode-select">
+                  <option value="modeA">Subgoals</option>
+                  <option value="modeB">Actions</option>
+                </select>
+              </span>
+
+              <span>
+                Robot:
+                <select id="robot-select">
+                  <option value="robotA">Dual-Arm PR2</option>
+                  <option value="robotB">Single-Arm PR2</option>
+                </select>
+              </span>
+              
+              <span>
+                Init:
+                <select id="env-select">
+                  <option value="envA">Open Spaces</option>
+                  <option value="envB">More Obstacles</option>
+                </select>
+              </span>
+              
+            </div>
+            <div class="chat-content" id="chat-content">
+              <!-- Chat content will be loaded dynamically here -->
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+
+<section class="hero is-light" style="z-index:-10">
+  <div class="container">
+    <div class="hero-body" style="padding-bottom: 2em;">
+
+       <div class="container">
+         <h2 class="subtitle has-text-centered">
+         We evaluate VLM-TAMP on kitchen tasks where a robot must accomplish cooking goals<br> that require performing 30-50 actions in sequence and interacting with up to 21 objects.
+         </h2>
+       </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="hero" style="z-index:-10">
+  <div class="container">
+    <div class="hero-body" style="padding-bottom: 2em;">
+
+       <div class="container">
+
+         <h2 class="subtitle has-text-centered">
+         <span class="text-vlm">VLM-TAMP</span> substantially outperforms <span class="text-baselines">baselines</span> that rigidly and independently execute VLM-generated action sequences,  <br> both in terms of success rates (50 to 100% versus 0%) and average task completion percentage (72 to 100% versus 15 to 45%). 
+         </h2>
+
+          <img src="media/figures/result_1.png" class="full-image" style="width:75%; padding-top: 0.5em;padding-bottom: 2em;" alt="result_1" />
+
+         <h2 class="subtitle has-text-centered">
+         Reprompting VLM visibly benefit <span class="text-vlm">VLM-TAMP</span>, increasing task success increasing by 47 to 55% on the harder problems,<br> while it doesn't help the <span class="text-baselines">baseline</span> which predicts actions
+         </h2>
+
+          <img src="media/figures/result_2.png" class="full-image" style="width:75%; padding-top: 0.5em;" alt="result_2" />
+
+       </div>
+
+    </div>
+  </div>
+</section>
+
 
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -302,7 +345,7 @@
           <h3 class="title is-3 has-text-centered">Video</h3>
           <div class="publication-video">
             <!-- https://www.youtube.com/watch?v=VLikGooIdwg&ab_channel=ZhutianYang-->
-            <iframe src="https://www.youtube.com/embed/VLikGooIdwg?rel=0&amp;showinfo=0"
+            <iframe src="https://www.youtube.com/embed/1JDua3opFuM?rel=0&amp;showinfo=0"
                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
@@ -311,20 +354,20 @@
   </div>
 </section>
 
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-widescreen content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@INPROCEEDINGS{yang2023piginet, 
-    AUTHOR    = {Zhutian  Yang AND Caelan R Garrett AND Tomas Lozano-Perez AND Leslie Kaelbling AND Dieter Fox}, 
-    TITLE     = {{Sequence-Based Plan Feasibility Prediction for Efficient Task and Motion Planning}}, 
-    BOOKTITLE = {Proceedings of Robotics: Science and Systems}, 
-    YEAR      = {2023}, 
-    ADDRESS   = {Daegu, Republic of Korea}, 
-    MONTH     = {July}, 
-    DOI       = {10.15607/RSS.2023.XIX.061} 
+    <pre><code>@misc{yang2024guidinglonghorizontaskmotion,
+      title={Guiding Long-Horizon Task and Motion Planning with Vision Language Models}, 
+      author={Zhutian Yang and Caelan Garrett and Dieter Fox and Tomás Lozano-Pérez and Leslie Pack Kaelbling},
+      year={2024},
+      eprint={2410.02193},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2410.02193}, 
 } </code></pre>
   </div>
-</section> -->
+</section>
 
 <footer class="footer">
   <div class="container">

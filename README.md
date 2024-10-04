@@ -1,6 +1,11 @@
 # VLM-TAMP
 
-This repository contains project page source code for <a href="https://piginet.github.io/">VLM-TAMP</a>.
+This repository contains project page source code for <a href="https://zt-yang.github.io/vlm-tamp-robot">VLM-TAMP</a>.
+
+Since the page loads html snippets of VLM conversations,
+```
+python3 -m http.server
+```
 
 
 # Website License

@@ -1,0 +1,48 @@
+<p>Plan a short sequence of actions that accomplishes the following goal: <br>
+``make chicken soup''. <br>
+<br>
+Respond with detailed but simple instructions in English. Each line must consists of only one action, <br>
+where objects mentioned must be items from the following list:<br></p>
+
+<span class="expand-toggle-1">[expand]</span>
+<div class="hidden-text-1">
+['chicken leg', 'cabinet right door', 'cabinet left door', 'cabinet', 'stove on the left', 'stove on the right', 'counter top on the left', 'counter top on the right', 'pot lid', 'pot body', 'pot bottom', 'stove knob on the right', 'stove knob on the left', 'kitchen sink', 'faucet handle', 'fridge', 'fridge door', 'fridge shelf', 'salt shaker', 'pepper shaker'].<br>
+<br>
+Currently, you can see the following objects:<br>
+``the pot lid is in the pot body,<br>
+the pot body is on the counter top on the right,<br>
+the faucet is on the basin's faucet platform,<br>
+the pepper shaker is in the cabinet,<br>
+cabinet right door is fully closed,<br>
+cabinet left door is partially open,<br>
+fridge door is fully closed,<br>
+stove knob on the right is turned off,<br>
+stove knob on the left is turned off,<br>
+faucet handle is turned off''<br>
+<br>
+</div>
+<p>
+You have already taken the following actions written in a formal language:<br>
+1. ['open', 'fridge door']<br>
+2. ['pick', 'chicken leg']<br>
+3. ['close', 'fridge door']<br>
+4. ['open', 'cabinet left door']<br>
+5. ['pick', 'salt shaker']<br>
+Currently, the robot is holding some objects. The right hand is holding salt shaker. The left hand is holding chicken leg. <br>
+<br>
+You just failed at planning for actions ['close', 'cabinet left door']. So please do not list this actions as the first actions to achieve in your answer..<br>
+<br>
+<br>
+You are a mobile robot with two arms. You must obey the following commonsense rules:<br>
+</p>
+<span class="expand-toggle-2">[expand]</span>
+<div class="hidden-text-2">
+1. You must have at least one empty hand before you can pick up an object or open or close a joint.<br>
+2. When you sprinkle or pour something into a container, there must not be objects placed on top of the container.<br>
+3. You can only take actions on objects that you can see. <br>
+4. If you cannot see an object, it may be behind a door or inside drawer.<br>
+5. If you cannot see the inside of a space, you must open its door or drawer before you can pick objects from it or place objects inside it. <br>
+<br>
+The accompanying image is a collage of two images depicting a scene with a robot in a kitchen. <br>
+There are different sets of annotations of object names with object bounding boxes drawn on the images.
+</div>
